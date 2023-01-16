@@ -1,0 +1,20 @@
+{
+  "name": "renard",
+  "version": "1.0.0",
+  "description": "employee",
+  "main": "Employee.test.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "renards"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "init": "^0.1.2",
+    "inquirer": "^9.1.4",
+    "jest": "^29.3.1"
+  }
+}
