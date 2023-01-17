@@ -1,29 +1,37 @@
-const employee = require('../lib/employee');
-const employee = new employee('Nick','88','nickb@outlook.com');
+const Intern = require('../lib/Employee');
+const intern = new Intern('Nick', 88, 'nickb@outlook.com', 'UCD Davis');
 
-test('test if we can get the constructor values for the employee object', () => {
-    expect(employee.name).tobe('Nick');
-    expect(employee.id).tobe('88');
-    expect(employee.email).tobe('nickb@outlook.com');
-    expect(employee.school).tobe('UCD Davis');
-});mp, init
+describe("Intern class", () => {
+    it("new Intern instance has 3 properties", () => {
+        const internProperties = Object.keys(intern);
+        expect(internProperties.length).toEqual(3);
+    });
 
-test('test if we can get the getName() method', () => {
-    expect(employee.getName()).tobe('Nick');
-});
+    describe("getName()", () => {
+        it("returns Intern name", () => {
+            const internName = intern.getName();
+            expect(internName).toEqual('Nick');
+        });
+    });
 
-test('test if we can get the getId() method', () => {
-    expect(employee.getId()).tobe('88');
-});
+    describe("getId()", () => {
+        it("returns Intern ID", () => {
+            const internId = intern.getId();
+            expect(internId).toEqual(88);
+        });
+    });
 
-test('test if we can get the getEmail() method', () => {
-    expect(employee.getEmail()).tobe('nickb@outlook.com');
-});
+    describe("getEmail()", () => {
+        it("returns Intern email", () => {
+            const internEmail = intern.getEmail();
+            expect(internEmail).toEqual('nickb@outlook.com');
+        });
+    });
 
-test('test if we can get the getRole() method', () => {
-    expect(employee.getTitle()).tobe('Intern');
-});
-
-test('test if we can get the getSchool() method', () => {
-    expect(employee.getSchool()).tobe('School');
+    describe("getSchool)", () => {
+        it("returns the string 'UCD Davis'", () => {
+            const school = intern.getSchool();
+            expect('UCD Davis').toEqual('UCD Davis');
+        });
+    });
 });

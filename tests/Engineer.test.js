@@ -1,25 +1,45 @@
-const employee = require('../lib/employee');
-const employee = new employee('Renard','43','renards@royalty.com');
+const Engineer = require('../lib/engineer');
+const engineer = new Engineer('Renard', 43, 'renards@live.com', 'renards');
 
-test('test if we can get the constructor values for the employee object', () => {
-    expect(employee.name).tobe('Renard');
-    expect(employee.id).tobe('43');
-    expect(employee.email).tobe('renards@royalty.com');
-    expect(employee.github).tobe('renards');
+describe("Engineer class", () => {
+    it("new Engineer instance has 4 properties", () => {
+        const engineerProperties = Object.keys(engineer);
+        expect(engineerProperties.length).toEqual(4);
+    });
 });
 
-test('test if we can get the getId() method', () => {
-    expect(employee.getId()).tobe('43');
-});
+    describe("getName()", () => {
+        it("returns Engineer name", () => {
+            const engineerName = engineer.getName();
+            expect(engineerName).toEqual('Renard');
+        });
+    });
 
-test('test if we can get the getEmail() method', () => {
-    expect(employee.getEmail()).tobe('renards@royalty.com');
-});
+    describe("getId()", () => {
+        it("returns Manager ID", () => {
+            const managerId = engineer.getId();
+            expect(managerId).toEqual(43);
+        });
+    });
 
-test('test if we can get the getRole() method', () => {
-    expect(employee.getRole()).tobe('Engineer');
-});
+    describe("getEmail()", () => {
+        it("returns Manager email", () => {
+            const managerEmail = engineer.getEmail();
+            expect(managerEmail).toEqual('renards@live.com');
+        });
+    });
 
-test('test if we can get the getgithub() method', () => {
-    expect(employee.getTitle()).tobe('');
-});
+    describe("getGitHub()", () => {
+        it("returns Engineer GitHub", () => {
+            const engineerGitHub = engineer.getGithub();
+            expect(engineerGitHub).toEqual('renards');
+        });
+    });
+
+    describe("getRole()", () => {
+        it("returns the string 'Engineer'", () => {
+            const engineerRole = engineer.getRole();
+            expect(engineerRole).toEqual('Engineer');
+        });
+    });
+

@@ -1,24 +1,40 @@
-const employee = require('../lib/Employee');
-const employee = new employee('','','');
 
-test('test if we can get the constructor values for the employee object', () => {
-    expect(employee.name).tobe('');
-    expect(employee.id).tobe('');
-    expect(employee.email).tobe('');
-});mp, init
+const Employee = require('../lib/Employee');
+const employee = new Employee('Josh', 2, 'joshj@gmail.com');
 
-test('test if we can get the getId() method', () => {
-    expect(employee.getId()).tobe('');
+describe("Employee class", () => {
+    it("new Employee instance has 3 properties", () => {
+        const employeeProperties = Object.keys(employee);
+        expect(employeeProperties.length).toEqual(3);
+    });
+
+    describe("getName()", () => {
+        it("returns Employee name", () => {
+            const employeeName = employee.getName();
+            expect(employeeName).toEqual('Josh');
+        });
+    });
+
+    describe("getId()", () => {
+        it("returns Employee ID", () => {
+            const employeeId = employee.getId();
+            expect(employeeId).toEqual(2);
+        });
+    });
+
+    describe("getEmail()", () => {
+        it("returns Employee email", () => {
+            const employeeEmail = employee.getEmail();
+            expect(employeeEmail).toEqual('joshj@gmail.com');
+        });
+    });
+
+    describe("getRole()", () => {
+        it("returns the string 'Employee'", () => {
+            const role = employee.getRole();
+            expect(role).toEqual('Employee');
+        });
+    });
 });
 
-test('test if we can get the getEmail() method', () => {
-    expect(employee.getEmail()).tobe('');
-});
 
-test('test if we can get the getTitle() method', () => {
-    expect(employee.getTitle()).tobe('');
-});
-
-test('test if we can get the getgithub() method', () => {
-    expect(employee.getTitle()).tobe('');
-});

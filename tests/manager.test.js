@@ -1,30 +1,48 @@
 
-const manager = require('../lib/manager');
-const employee = new manager('Josh','2','joshj@plantlovers.com', '33');
+const Manager = require('../lib/manager');
+const manager = new Manager('Josh', 2, 'joshj@gmail.com', 33);
 
-test('test if we can get the constructor values for the employee object', () => {
-    expect(employee.name).tobe('Josh');
-    expect(employee.id).tobe('2');
-    expect(employee.email).tobe('joshj@gmail.com');
-    expect(employee.officeNumber).tobe('33');
+describe("Manager class", () => {
+    it("new Manager instance has 4 properties", () => {
+        const managerProperties = Object.keys(manager);
+        expect(managerProperties.length).toEqual(4);
+    });
+
+    describe("getName()", () => {
+        it("returns Manager name", () => {
+            const managerName = manager.getName();
+            expect(managerName).toEqual('Josh');
+        });
+    });
+
+    describe("getId()", () => {
+        it("returns Manager ID", () => {
+            const managerId = manager.getId();
+            expect(managerId).toEqual(2);
+        });
+    });
+
+    describe("getEmail()", () => {
+        it("returns Manager email", () => {
+            const managerEmail = manager.getEmail();
+            expect(managerEmail).toEqual('joshj@gmail.com');
+        });
+    });
+
+    describe("getOfficeNumber()", () => {
+        it("returns Manager officeNumber", () => {
+            const managerOfficeNumber = manager.getOfficeNumber();
+            expect(managerOfficeNumber).toEqual(33);
+        });
+    });
+
+
+    describe("getRole()", () => {
+        it("returns the string 'Manager'", () => {
+            const managerRole = manager.getRole();
+            expect(managerRole).toEqual('Manager');
+        });
+    });
 });
 
-test('test if we can get the getName() method', () => {
-    expect(employee.getName()).tobe('Josh');
-});
 
-test('test if we can get the getId() method', () => {
-    expect(employee.getId()).tobe('2');
-});
-
-test('test if we can get the getEmail() method', () => {
-    expect(employee.getEmail()).tobe('joshj@gmail.com');
-});
-
-test('test if we can get the getRole() method', () => {
-    expect(employee.getRole()).tobe('Manager');
-});
-
-test('test if we can get the getOfficeNumber() method', () => {
-    expect(employee.getOfficeNumber()).tobe('33');
-});
