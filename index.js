@@ -99,12 +99,12 @@ const questions = async () => {
    }
 ])
 
-   const newManager = new Manager {
-      answers: name,
-      answers: id,
-      answers: email,
-      managerAns: officeNumberInput
-   };
+   const newManager = new Manager (
+      answers. name,
+      answers. id,
+      answers. email,
+      managerAns. officeNumberInput
+   );
   newTeamMemberData.push(newManager);
 
 } else if (answers.role === "Engineer") {
@@ -116,12 +116,12 @@ const questions = async () => {
       message: 'What is your github username?',
    }
 ])
-    const newEngineer = new Engineer {
-     answers: name,
-     answers: id,
-     answers: email,
-     githubAns: github
-   };
+    const newEngineer = new Engineer ()
+     /*answers. name,
+     answers. id,
+     answers. email,
+     githubAns. github
+    );*/
    newTeamMemberData.push(newEngineer);
 
 } else if (answers.role === "Intern") {
@@ -133,14 +133,14 @@ const questions = async () => {
       message: 'What school did you attend?',
    }
 ])
-    const newIntern = new Intern {
-     answers: name,
+    const newIntern = new Intern ()
+     /*answers: name,
      answers: id,
      answers: email,
      githubAns: github
-   };
+   };*/
    newTeamMemberData.push(newIntern);
- }
+ 
 
 };
 
@@ -172,4 +172,4 @@ fs.writeFileSync(
  generateTeam(newTeamMemberData),
  "utf-8"
 );
-}
+}}
