@@ -2,13 +2,46 @@ body {
   background-color: rgb(169, 151, 185);
 }
 
-.container-teammate {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+.container-manager {
+ /* display: grid;*/
+  /*grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;*/
+  align-content: center;
+  text-align: center;
+  padding: 10px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  border-color: black;
+  margin: 50px;
+  margin-bottom: 40px;
+}
+
+.container-teammates {
+  display: block;
+  /*grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;*/
   align-content: center;
   padding: 10px;
-  height: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  border-color: black;
+  margin: 50px;
+  margin-bottom: 40px;
+}
+
+.container-manager {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  /*height: 300px;
+  width: 400px;*/
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 10px;
   border-color: black;
   margin: 50px;
@@ -28,10 +61,23 @@ body {
     width: 400px;
   }
 
-  .teammate-content2 {
-    display: inline;
+  .manager-content {
+    border: 2px solid black;
+    background-color: rgb(213, 180, 219);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /*width: 500px;*/
   }
 
+  /*.teammate-content2 {
+    display: inline;
+  }*/
+
+  
   h1 {
     display: flex;
     justify-content: center;
@@ -39,5 +85,15 @@ body {
   }
 
   h2 {
-    color: white;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+  }
+
+  h3 {
+    display: flex;
+  }
+
+  .card-body{
+    background-color: rgb(135, 100, 158);
+    height: 200px;
   }
