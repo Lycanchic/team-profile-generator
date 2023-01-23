@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(169, 151, 185);
+}
+
+.card-header {
+  background-color: rgb(173, 149, 194);
+  color: white;
+}
+
+.card-body {
+  background-color: rgb(119, 90, 145);
+}
+
+.col-12 {
+  background-color: rgb(126, 112, 141);
+  color: white;
+}
+
+.list-group-item {
+  color:rgb(119, 90, 145)
+}
