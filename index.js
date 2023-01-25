@@ -21,9 +21,7 @@ const teamMembers = [];
 // prompts
 const questions = async () => {
   const answers = await inquirer.prompt([
-    /*const addmanager = () => {*/
-    /*return inquirer.prompt([*/
-
+   
     {
       type: "input",
       name: "name",
